@@ -1,0 +1,70 @@
+{
+  "version": "20.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "MollyCdkSamStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MollyCdkSamStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MollyCdkSamStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://030819073208/us-east-1",
+      "properties": {
+        "templateFile": "MollyCdkSamStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::030819073208:role/cdk-hnb659fds-deploy-role-030819073208-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::030819073208:role/cdk-hnb659fds-cfn-exec-role-030819073208-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-030819073208-us-east-1/19ebe4e814056faa5275ca5283c63e2103330592cf3dbc739a0ebc6bf5556e16.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MollyCdkSamStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::030819073208:role/cdk-hnb659fds-lookup-role-030819073208-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "MollyCdkSamStack.assets"
+      ],
+      "metadata": {
+        "/MollyCdkSamStack/EgisDataQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EgisDataQueue858192C9"
+          }
+        ],
+        "/MollyCdkSamStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/MollyCdkSamStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/MollyCdkSamStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "MollyCdkSamStack"
+    }
+  }
+}
