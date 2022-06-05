@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An EGIS AWS Lambda application that reads from a Kafka topic and writes to an SQS queue.
+Resources:
+  function:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: target/egis-lambda-java-events-1.0.SNAPSHOT.jar
+      Handler: egis.HandlerKafka
+      Runtime: java11
+      Description: Java function
+      MemorySize: 512
+      Timeout: 10
+      # Function's execution role
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AWSLambda_ReadOnlyAccess
+        - AWSXrayWriteOnlyAccess
+        - AWSLambdaVPCAccessExecutionRole
+        - kafka-cluster:Connect
+        - kafka-cluster:DescribeGroup
+        - kafka-cluster:AlterGroup
+        - kafka-cluster:DescribeTopic
+        - kafka-cluster:ReadData
+        - kafka-cluster:DescribeClusterDynamicConfiguration
+      Tracing: Active
