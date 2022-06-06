@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "consumer",
+      "type": "amazon.aws.samples.kafka.KafkaConsumerProperties",
+      "sourceType": "amazon.aws.samples.kafka.KafkaConsumerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "consumer.aws-profile",
+      "type": "java.lang.String",
+      "sourceType": "amazon.aws.samples.kafka.KafkaConsumerProperties"
+    },
+    {
+      "name": "consumer.bootstrap-address",
+      "type": "java.lang.String",
+      "sourceType": "amazon.aws.samples.kafka.KafkaConsumerProperties"
+    },
+    {
+      "name": "consumer.group-id",
+      "type": "java.lang.String",
+      "sourceType": "amazon.aws.samples.kafka.KafkaConsumerProperties"
+    },
+    {
+      "name": "consumer.region",
+      "type": "java.lang.String",
+      "sourceType": "amazon.aws.samples.kafka.KafkaConsumerProperties"
+    },
+    {
+      "name": "consumer.table-name",
+      "type": "java.lang.String",
+      "sourceType": "amazon.aws.samples.kafka.KafkaConsumerProperties"
+    },
+    {
+      "name": "consumer.topic",
+      "type": "java.lang.String",
+      "sourceType": "amazon.aws.samples.kafka.KafkaConsumerProperties"
+    },
+    {
+      "name": "consumer.trust-store-location",
+      "type": "java.lang.String",
+      "sourceType": "amazon.aws.samples.kafka.KafkaConsumerProperties"
+    }
+  ],
+  "hints": []
+}

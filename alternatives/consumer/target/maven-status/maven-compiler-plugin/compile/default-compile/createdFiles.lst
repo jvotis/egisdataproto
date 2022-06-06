@@ -1,0 +1,8 @@
+amazon/aws/samples/kafka/KafkaConsumer.class
+META-INF/spring-configuration-metadata.json
+amazon/aws/samples/kafka/ApplicationConfig.class
+amazon/aws/samples/kafka/ConsumerApplication.class
+amazon/aws/samples/kafka/DynamoDBService.class
+amazon/aws/samples/kafka/Message.class
+amazon/aws/samples/kafka/BalanceException.class
+amazon/aws/samples/kafka/KafkaConsumerProperties.class
